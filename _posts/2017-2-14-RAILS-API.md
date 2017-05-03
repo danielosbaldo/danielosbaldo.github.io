@@ -38,6 +38,30 @@ nos movemos al directorio que creamos
  bundle install
  bin/rake db:setup
 ```
+#Ahora a hablar de configuramos
+CORS Cross-Origin Http Request es un estandar que permite realizar request desde varios origenes http para leer mas del tema aqui un enlace de mozilla [CORS](https://developer.mozilla.org/es/docs/Web/HTTP/Access_control_CORS)
+
+en esta ocacion veremos Cors en rails y se relizara por la gema rack-cors paraq usarla hay que abilitarla en el Gemfile
+```ruby
+# Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
+gem 'rack-cors'
+
+```
+ahora ingresamos Bundle install
+
+```shell
+bundle install
+```
+
+ahora nos moveremos a el archivo de configuración `config/initializers/cors.rb` una vez dento veran todo comentado este archivo hay que editarlo pueden usar las configuraciones que estan en [RackCors Github](https://github.com/cyu/rack-cors/)
+
+la mia se ve como la siguiente
+```ruby
+```
+
+
+
+*nota CORS Es recomendado por la [W3C](https://www.w3.org/)
 Despues configuramos RSPEC para el Testeo con:
 [Rspec](http://rspec.info/)
 en nuesto gemfile en la secion de desarrollo y testeo se agrega rspec-rails
