@@ -20,6 +20,7 @@ un API por sus siglas en ingles Aplication Programming Interface
 
 ## Comencemos:
 para iniciar lo primero que tenemos que hacer es asegurarnos de que todo este instalado y listo esto no es para principiantes en el ambiente rails si es su caso primero visiten instalacion aqui enlaces para cada plataforma:
+
 ###WINDOWS:
 hay 2 rutas la mas facil y rapida es con [RailsInstaller](http://railsinstaller.org/en) Pero en lo personal no me agrada.
 La segunda es [Vagrant](https://www.vagrantup.com/) el cual te permite manejar maquinas virtuales de manera rapida y sencilla apate de combinarlo con [Chef](https://www.chef.io/chef/) para la preinstalacion de todos los componentes. Vagrant es increible permite tener todas las bondades de linux en windows y con un consumo minimo de recursos Definitivamente lo recomiendo para los que deseen utilizar windows
@@ -57,14 +58,66 @@ ahora nos moveremos a el archivo de configuración `config/initializers/cors.rb`
 
 la mia se ve como la siguiente
 ```ruby
+
+Rails.application.config.middleware.insert_before 0, Rack::Cors do
+  allow do
+    origins 'example.com'
+
+    resource '*',
+      headers: :any,
+      methods: [:get, :post, :put, :patch, :delete, :options, :head]
+  end
+end
+
 ```
 
+nota CORS Es recomendado por la [W3C](https://www.w3.org/)
 
 
-*nota CORS Es recomendado por la [W3C](https://www.w3.org/)
+#Serializacion
+utilizaremos una gema para serializar active_model_serializers
+para mas informacion blog [serializer](https://www.sitepoint.com/active-model-serializers-rails-and-json-oh-my/)
+agregamos al Gemfile
+```ruby
+gem 'active_model_serializers', '~> 0.10.0'
+```
+y corremos bundle
+```shell
+
+bundle install
+
+```
+creamos el archivo `config/initializers/active_model_serializers.rb` y escribymos lo siguiente
+```ruby
+ActiveModel::Serializer.config.adapter = :json_api
+```
+
+#Versionar
+Veremos Como versionar las api en ruby se pueden usar gemas pero en este caso les dire como hacerlo desde cero.
+
+
+
 Despues configuramos RSPEC para el Testeo con:
 [Rspec](http://rspec.info/)
 en nuesto gemfile en la secion de desarrollo y testeo se agrega rspec-rails
+
+```ruby
+group :development, :test do
+
+  # Use RSpec for specs
+  gem 'rspec-rails', '>= 3.5.0'
+
+  # Use Factory Girl for generating random test data
+  gem 'factory_girl_rails'
+end
+
+```
+
+actualizamos bundle
+
+y correomos el instalador
+
 ```shell
+rails g rspec:install
 
 ```
