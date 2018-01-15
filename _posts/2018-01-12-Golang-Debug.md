@@ -14,13 +14,13 @@ aqui no hay que quitarle credito a la buena documentacion de delve sige estos [p
 
 en nuestro codigo lo haremos con lo siguiente 
 ```go
-  runtime.Breakpoint()
+runtime.Breakpoint()
 ```
 
 # Agregamos a los importes el runtime
 
 ```go
-    import (
+import (
 	_ "github.com/go-sql-driver/mysql"
 	"fmt"
 	"time"
@@ -31,7 +31,7 @@ en nuestro codigo lo haremos con lo siguiente
 # para ejecutar el codigo y continuar con el in
 
 ``` shell
-  dlv debug [nombredelarchivo]
+dlv debug [nombredelarchivo]
 ```
 
  listo para saber mas como debugear hay que leer la documentacion de [delve](https://github.com/derekparker/delve)
