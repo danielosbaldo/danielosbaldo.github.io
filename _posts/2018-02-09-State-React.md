@@ -3,7 +3,7 @@ layout: post
 title: State React
 description: iNTENTARE EXPLICAR LO QUE ES EL ESTADO EN REACT COMO UTILIZARLO Y NOTAS IMPORTANTES SOBRE EL
 ---
-intro
+Notas Sobre State En React
 
 el estado de reactr es de lo mas complicado de entender de react
 
