@@ -12,6 +12,7 @@ En 2013 trabaje para [Interlogic](http://www.interlogic.com.mx/) una empreza que
 Despues Fui QA en [PDN](https://www.prodivnet.com/) y comenze a Aprende y usar Ruby y Ruby on Rails, desde entonces no paro de buscar cosas interesantes que aprender y implementar.
 Actualmente Trabajo Freelance en diferentes projectos. y como Desarollador para [SEC](http://www.sec.gob.mx/portal/index.php) con herramientas internas
 
+
 ### Info para ponernos de acuerdo para unas beers o para trabajar juntos
 
 [valenzuelaquintanadanielo@gmail.com](mailto:valenzuelaquintanadanielo@gmail.com)
