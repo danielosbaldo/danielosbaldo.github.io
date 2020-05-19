@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-Hey, Que onda Raza Soy Daniel Osbaldo Valenzuela Un desarrollador de software de _Hermosillo sonora_, el cual aparte de estar entusiasmado por la tecnologia, tambien disfruta de unas buenas cervezas!
+Hey, Que onda Raza Soy Daniel Osbaldo Valenzuela Un desarrollador de software de *Hermosillo, sonora*, el cual aparte de estar entusiasmado por la tecnologia tambien disfruta de unas buenas cervezas!
 
 ### More Information
 Coimenze a programar en el 2012 aun estaba en la carrera cuando aterize en mi primer proyecto profesional fue todo un reto, el primer libro de desarollo que leei fue POO y MVC en PHP por eugenia bahit informacion muy util para el Proyecto en php que desarollaba en ese entonces.
