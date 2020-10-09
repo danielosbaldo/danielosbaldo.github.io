@@ -1,0 +1,30 @@
+I"ใ<p>Que onda! El dia de hoy vamos a ver como debugear dolang con <a href="https://github.com/derekparker/delve">delve</a> una poderosa herramienta, un poco parecida a lo que ruby ofrece con <a href="https://github.com/pry/pry">pry</a></p>
+
+<p>para seguir estos ejemplos es necesario que conoscas un poco de <a href="https://github.com/golang/go">golang</a> รณ Go como Gustes llamarlo</p>
+
+<h1 id="primero-lo-instalaremos">Primero lo instalaremos</h1>
+<p>aqui no hay que quitarle credito a la buena documentacion de delve sige estos <a href="https://github.com/derekparker/delve/tree/master/Documentation/installation">pasos</a> depediendo de tu plataforma</p>
+
+<h1 id="lo-sigiente-es-situar-un-breakpoint">lo sigiente es situar un <a href="https://en.wikipedia.org/wiki/Breakpoint">breakpoint</a></h1>
+
+<p>en nuestro codigo lo haremos con lo siguiente</p>
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">runtime</span><span class="o">.</span><span class="n">Breakpoint</span><span class="p">()</span>
+</code></pre></div></div>
+
+<h1 id="agregamos-a-los-importes-el-runtime">Agregamos a los importes el runtime</h1>
+
+<div class="language-go highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">(</span>
+	<span class="n">_</span> <span class="s">"github.com/go-sql-driver/mysql"</span>
+	<span class="s">"fmt"</span>
+	<span class="s">"time"</span>
+	<span class="s">"runtime"</span> <span class="c">//esto es lo importante</span>
+<span class="p">)</span>
+</code></pre></div></div>
+
+<h1 id="para-ejecutar-el-codigo-y-continuar-con-el-in">para ejecutar el codigo y continuar con el in</h1>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>dlv debug <span class="o">[</span>nombredelarchivo]
+</code></pre></div></div>
+
+<p>listo para saber mas como debugear hay que leer la documentacion de <a href="https://github.com/derekparker/delve">delve</a></p>
+:ET

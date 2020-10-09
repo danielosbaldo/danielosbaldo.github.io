@@ -1,0 +1,22 @@
+I"�<p>OJO: Este post contiene informacion sonbre los proncipios de la programacion orientada a objetos.</p>
+
+<h3 id="que-es-la-poo-en-rails">¿Que es la POO en rails?</h3>
+<p>es un paradigma de programacion que esta pensado en realizar grandes y conplejas aplicaciones reduciendo la fatiga del mantenimeinto, los desarolladores necesitaban encontrar una forma de contener los datos para poderlos manipular y cambiar sin afectar todo el sistema  y se creo la programacion orientada a objetos</p>
+
+<h3 id="que-es-una-clase">¿Que es una Clase?</h3>
+<p>Es un modelo o bien un molde, una forma de definir attributos y comportamiento</p>
+<h3 id="que-es-un-objeto">¿Que es un Objeto?</h3>
+<p>Se puede decir que un objeto es el producto del molde de la classe aunque es un poco mas complejo que solo eso</p>
+
+<p>las classes definen los objetos</p>
+
+<h3 id="que-es-el-polimorfismo">Que es el Polimorfismo</h3>
+<p>El polimorfismo en la programacion es basicamente proveer la misma interfaz para en diferentes fomas 
+esto permite que una variable, metodo o objeto tome multiples formas</p>
+
+<h2 id="que-es-un-modulo">que es un modulo</h2>
+<p>es una colexion de comportamientos que es usable por otras classes usando mixins</p>
+
+<h2 id="que-son-los-mixins">que Son los “MIXINS”</h2>
+<p>un mixin es una clase que ofrece cierta funcionalidad para ser heredada por una subclase, pero no está ideada para ser autónoma.</p>
+:ET

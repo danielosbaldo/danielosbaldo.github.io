@@ -1,0 +1,23 @@
+I"d<p>Que onda! checaremos la instalación de rubymine, primero nos descargamos el tar.gz de la pagina official de <a href="https://www.jetbrains.com/ruby/download/#section=linux">rubymine</a>
+una vez descargado procederemos a instalarlo</p>
+
+<p>#Primero lo descomprimimos</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">tar</span> <span class="nt">-xzf</span> RubyMine-tuversionaqui.tar.gz
+</code></pre></div></div>
+<p>#hacemos un directorio para RubyMine</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">mkdir</span> <span class="nt">-p</span> /opt/rubymine
+</code></pre></div></div>
+<p>#movemos el rubymine a este directorio</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">mv</span> ~/Downloads/RubyMine-tuversionaqui /opt/rubymine
+</code></pre></div></div>
+<p>#Creamos un link symbolico</p>
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  <span class="nb">ln</span> <span class="nt">-nfs</span> /opt/rubymines/RubyMine-X.Y.Z /opt/rubymine
+</code></pre></div></div>
+<p>para iniciar el rubymine tenemos que ejecular el sh del direcctorio /opt/rubymine/bin/rubymine.sh
+#ahora lo haremos attachable a un dock o a el menu de software de ubuntu
+en rubymine vamos a Tools -&gt; Create Desktop Entry
+esto creara un atajo para el menu de el sistema
+cierren rrubymine y arranquenlo desde el menu del sistema o buscador de applicaciones</p>
+
+<p>y listo ya tienes rubymine</p>
+:ET
