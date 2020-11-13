@@ -4,10 +4,26 @@ layout: default
 
 <div class="landing">
 <section class="generalinfo">
-<h1>Resume</h1>
+<h1>Full Stack Lead Developer</h1>
 <p>Im a Fullstack software developer from north western mexico, i love code,
    coffe and beer <br> hope we can work on some proyects together.<br>
    have a cold one </p>
+</section>
+<section class"exp">
+  {% for post in site.experience %}
+    <article class="post">
+
+      <h2>Role: <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> {{post.time}}</h2>
+      <h3>Company: {{ post.company }}</h3>
+      <p>{{ post.description }}</p>
+
+      <div class="entry">
+        {{ posts.excerpt }}
+      </div>
+
+      <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Learn More</a>
+    </article>
+  {% endfor %}
 </section>
 <h1></h1>
 <p></p>
