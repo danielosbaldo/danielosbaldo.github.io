@@ -32,6 +32,13 @@
             <a href="{{ site.baseurl }}/about">About</a>
             <a href="{{ site.baseurl }}/food">Food</a>
             <a href="{{ site.baseurl }}/work">My Work</a>
+            {% if site.lang == "es" %}
+              {% capture link1 %}{{ site.baseurl_root }}/en{{ page.url}}{% endcapture %}
+              <a href="{{ link1 }}" >{% t global.english %}</a>
+            {% elsif site.lang == "en" %}
+              {% capture link2 %}{{ site.baseurl_root }}{{ page.url  }}{% endcapture %}
+              <a href="{{ link2 }}" >{% t global.spanish %}</a>
+            {% endif %}
           </nav>
         </header>
       </div>
