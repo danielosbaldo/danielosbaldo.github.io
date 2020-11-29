@@ -1,0 +1,8 @@
+global:
+  english: Eng
+  spanish: Es
+pages:
+  home: Principal
+  work: Trabajo
+titles:
+  pagination: Pagination
