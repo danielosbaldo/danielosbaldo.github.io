@@ -67,9 +67,10 @@ permalink: /:title/
 version: v1.2.0
 
 #Lenguage configuration
+languages: ["en", "es"]
 exclude_from_localizations: ["assets", "CNAME"]
 defaultLang: en
-languages: ["en", "es"]
+
 
 # Jekyll 3 now only supports Kramdown for Markdown
 kramdown:
