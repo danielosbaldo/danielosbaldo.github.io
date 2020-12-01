@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>COMIDA – Daniel Valenzuela – Web Developer from North Western Mexico</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="Notas Sobre State En React
+" />
+    <meta property="og:description" content="Notas Sobre State En React
+" />
+    
+    <meta name="author" content="Daniel Valenzuela" />
+
+    
+    <meta property="og:title" content="COMIDA" />
+    <meta property="twitter:title" content="COMIDA" />
+    
+    <!-- Begin Jekyll SEO tag v2.6.1 -->
+<title>COMIDA | Daniel Valenzuela</title>
+<meta name="generator" content="Jekyll v4.1.1" />
+<meta property="og:title" content="COMIDA" />
+<meta property="og:locale" content="en" />
+<meta name="description" content="The story description text goes here" />
+<meta property="og:description" content="The story description text goes here" />
+<meta property="og:site_name" content="Daniel Valenzuela" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-07-21T00:00:00-07:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/foods/2020-07-21-State-React/"},"headline":"COMIDA","dateModified":"2020-07-21T00:00:00-07:00","datePublished":"2020-07-21T00:00:00-07:00","url":"/foods/2020-07-21-State-React/","description":"The story description text goes here","@context":"https://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Daniel Valenzuela - Web Developer from North Western Mexico" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://avatars0.githubusercontent.com/u/2661970?s=460&v=4" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Daniel Valenzuela</a></h1>
+            <p class="site-description">Web Developer from North Western Mexico</p>
+          </div>
+
+          <nav>
+            <a href="/blog">Blog</a>
+            <a href="/about">About</a>
+            <a href="/food">Food</a>
+            <a href="/work">My Work</a>
+            <!--https://jerry901.github.io/en/2020/02/2020-02-06-01/ -->
+            
+              
+              <a href="/foods/2020-07-21-State-React/" >Es</a>
+            
+          </nav>
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>COMIDA</h1>
+
+  <div class="entry">
+    <p>Notas Sobre State En React</p>
+
+<p>el estado de reactr es de lo mas complicado de entender de react</p>
+
+<p>State(estado) es un objeto plano de javascript que se usa para registrar y reaccionar a los eventos de usuario, cada componente basado en una clase que definimos tiene su propio objeto de estado cuando el estado de un componente cambie el componente inmediatamanete se re renderea esto tambien para tosod sus hijos se forzan a re renderiar:</p>
+
+<p>antes de usar estado(state) adentro de un componente primero hay que inicializar el objeto de estado
+para hacerlo hay que declarar la propiedad estado a un objeto pleno de javascript(plain javascript object) adentro de el metodo constructor de la clase</p>
+
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nx">SearchBar</span> <span class="kd">extends</span> <span class="nx">Component</span> <span class="p">{</span>
+    <span class="kd">constructor</span><span class="p">(</span><span class="nx">props</span> <span class="p">)</span> <span class="p">{</span> <span class="c1">//todas las clases javascript tienen una funcion especial llamada constructor esta es la primera y unica funcion llamada automaticamente cuando una nueva instancia de la clase se crea, puedes imaginarte en relidad esta funcion es llamada todo el timepo porque se llama cuando se crea una nueva instancia de la clase, la funcion de constructor es recerbada para hacer configuraciones en nuestra clase como inicializar variables, inicializar estado y ese tipo de cosas</span>
+        <span class="k">super</span><span class="p">(</span><span class="nx">props</span><span class="p">);</span> <span class="c1">// Coponent tiene su propia funcion constructora, cuando definimos un metodo que ya esta definido en la clase padre la cual es component, podemos  llamar ese methodo padre en la calse padre llamando SUPER. Super llama la clase padre de el metodo que extendemos o metodo padre  </span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span> <span class="na">term</span><span class="p">:</span> <span class="dl">''</span><span class="p">};</span> <span class="c1">// cuando usamo state lo inicializamos creando un objeto nuevo y asignandozelo a This.State, el objeto que pasemos tambien tendra propiedades que queremos registrar en el state(estado), en este ejemplo queremos registrar la propiedad term de el estado(state) usamos Term por referirnos a termino de busqueda que es lo que pretende hacer esta clase cuando un usuario ingrese datos en un input queremos registrar lo que escrive en el This.state</span>
+    <span class="p">}</span> <span class="c1">//asi se inicializa el estado</span>
+
+    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">term</span><span class="p">:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span> <span class="p">})}</span> <span class="sr">/&gt;</span><span class="err">;
+</span>    <span class="p">}</span>
+
+<span class="p">}</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="nx">SearchBar</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>para actualizar un estado no se utiliza this nunca nucna debemos manipular estate fuera del constructor con this, se usa this.setState para actualizarlo ej&gt;</p>
+<div class="language-javascript highlighter-rouge"><div class="highlight"><pre class="highlight"><code>    <span class="nx">render</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">return</span> <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">onChange</span><span class="o">=</span><span class="p">{</span> <span class="nx">event</span> <span class="o">=&gt;</span> <span class="k">this</span><span class="p">.</span><span class="nx">setState</span><span class="p">({</span> <span class="na">term</span><span class="p">:</span> <span class="nx">event</span><span class="p">.</span><span class="nx">target</span><span class="p">.</span><span class="nx">value</span> <span class="p">})}</span> <span class="sr">/&gt;</span><span class="err">;
+</span>    <span class="p">}</span>
+</code></pre></div></div>
+
+  </div>
+
+  <div class="date">
+    Escrito el July 21, 2020 comida
+  </div>
+
+  
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:valenzuelaquintanadanielo@gmail.com"><i class="svg-icon email"></i></a>
+
+
+<a href="https://github.com/danielosbaldo"><i class="svg-icon github"></i></a>
+
+<a href="https://www.linkedin.com/in/osbaldovalenzuela"><i class="svg-icon linkedin"></i></a>
+
+
+<a href="https://www.twitter.com/danielosbaldo2"><i class="svg-icon twitter"></i></a>
+
+
+
+        </footer>
+      </div>
+    </div>
+
+    
+
+  </body>
+</html>
